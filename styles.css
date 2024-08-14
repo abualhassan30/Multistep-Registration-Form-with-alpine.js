@@ -1,0 +1,35 @@
+
+
+html {
+    background-image: url(white.png);
+    background-position: center center; 
+    background-repeat: repeat;
+    background-attachment: fixed;
+    background-origin: border-box; /* Changed from padding-box to border-box */
+    background-clip: border-box; /* Changed to match origin */
+    background-color: #000000; 
+    background-size: 600px; 
+    color: #f6f7fb;
+    margin: 0; /* Remove default margin to prevent overflow */
+    padding: 0; /* Reset padding */
+    box-sizing: border-box;
+    position: relative;
+    overflow: hidden; /* Prevent overflow */
+    min-height: 100vh; /* Ensure full viewport height */
+    padding: 20px;
+}
+
+html::after {
+    box-sizing: content-box;
+    display: block;
+    content: "";
+    height: calc(100% - 40px); /* Adjusted height to account for border */
+    width: calc(100% - 40px); /* Adjusted width to account for border */
+    position: absolute;
+    top: 0;
+    left: 0;
+    border: 20px solid #000000;
+    background: url("wh.png");
+    background-size: cover; /* Ensure the image covers the entire area */
+    pointer-events: none; /* Prevent this element from interfering with other content */
+}
